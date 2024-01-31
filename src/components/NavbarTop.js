@@ -13,7 +13,7 @@ function NavbarTop() {
         style={{ justifyContent: "space-between", flexDirection: "row" }}
       >
         <div>
-          <Navbar.Brand href="/" style={{ color: "white" }}>
+          <Navbar.Brand href="Login" style={{ color: "white" }}>
             Veridical Reviews
           </Navbar.Brand>
         </div>
