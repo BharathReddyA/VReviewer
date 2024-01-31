@@ -7,24 +7,67 @@
   min-width: 400px;
 }
 
-.signupPage{
+.signupPage {
   background-color: #545454;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px 0px #2e2e2e;
+  margin-bottom: 10px
 }
+
+.gap {
+  padding: 15px;
+}
+
+.gridViewContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* gap: 20px; */
+}
+
 .signupForm {
   color: #ffffff;
   background-color: #2e2e2e;
-  min-height: 670px;
-  border-top-right-radius: 25px;
-  border-top-left-radius: 25px;
+  border-radius: 15px;
   box-shadow: 0px 10px 10px 0px #2e2e2e;
-  max-width: 500px;
+  max-width: 100%;
   padding: 20px;
+}
+
+.gridOne {
+  grid-area: 1 / 1 / 3 / 2;
+  z-index: 5;
+}
+
+.gridTwo {
+  grid-area: 1 / 3 / 3 / 4;
+  z-index: 1;
+}
+
+.socialButtonsCard{
+  background-color: #3c3c3c !important;
+  color: #ffffff !important;
+  border-radius: 15px !important;
+  padding: 20px !important;
+  box-shadow: 0px 10px 10px 0px #3c3c3c;
+}
+
+.signupContentCard {
+  background-color: #2e2e2e !important;
+  color: #ffffff !important;
+  border-radius: 15px !important;
+  padding: 20px !important;
+  box-shadow: 0px 10px 10px 0px #2e2e2e;
 }
 
 .formCenter {
   margin-top: 50px;
 }
 
-.formRowGap{
+.formRowGap {
   margin-bottom: 10px;
+}
+
+.navbarStyle {
+  background-color: #ffffff !important;
 }

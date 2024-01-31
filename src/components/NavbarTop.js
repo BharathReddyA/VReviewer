@@ -4,16 +4,17 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 // import NavDropdown from "react-bootstrap/NavDropdown";
+import "../Assets/Style.css";
 function NavbarTop() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary, navbarStyle">
       <Container
         fluid
         className="nav-style"
         style={{ justifyContent: "space-between", flexDirection: "row" }}
       >
         <div>
-          <Navbar.Brand href="Login" style={{ color: "white" }}>
+          <Navbar.Brand href="Login">
             Veridical Reviews
           </Navbar.Brand>
         </div>
@@ -30,7 +31,7 @@ function NavbarTop() {
           />
           <Navbar.Collapse
             id="navbarScroll"
-            style={{ color: "white", flexDirection: "column-reverse" }}
+            style={{ flexDirection: "column-reverse" }}
           >
             <Nav
               className="me-auto my-2 my-lg-0"
@@ -42,10 +43,10 @@ function NavbarTop() {
               }}
               navbarScroll
             >
-              <Nav.Link href="Login" style={{ color: "white" }}>
+              <Nav.Link href="Login">
                 Login
               </Nav.Link>
-              <Nav.Link href="SignUp" style={{ color: "white" }}>
+              <Nav.Link href="SignUp">
                 SignUp
               </Nav.Link>
             </Nav>
