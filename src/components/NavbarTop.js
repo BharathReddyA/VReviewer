@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 // import NavDropdown from "react-bootstrap/NavDropdown";
 import "../Assets/Style.css";
+import veridicalLogo from "../Assets/Images/Veridical.png";
 function NavbarTop() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary, navbarStyle">
@@ -15,7 +16,13 @@ function NavbarTop() {
       >
         <div>
           <Navbar.Brand href="Login">
-            Veridical Reviews
+            <img
+              src={veridicalLogo}
+              width="80"
+              height="80"
+              className="d-inline-block align-top"
+              alt="Veridical Logo"
+            />
           </Navbar.Brand>
         </div>
         <div
@@ -43,10 +50,10 @@ function NavbarTop() {
               }}
               navbarScroll
             >
-              <Nav.Link href="Login">
+              <Nav.Link href="Login" style={{ color: "white" }}>
                 Login
               </Nav.Link>
-              <Nav.Link href="SignUp">
+              <Nav.Link href="SignUp" style={{ color: "white" }}>
                 SignUp
               </Nav.Link>
             </Nav>
