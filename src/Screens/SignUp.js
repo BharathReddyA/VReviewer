@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import { Row, Col, Form, Button, Card } from "react-bootstrap";
+import {
+  uniqueNamesGenerator,
+  adjectives,
+  colors,
+  animals,
+} from "unique-names-generator";
 import "../Assets/Style.css";
 
 const SignUp = () => {
@@ -11,6 +17,14 @@ const SignUp = () => {
     email: "",
     password: "",
   });
+  const generateNickname = () => {
+    const randomNickname = uniqueNamesGenerator({
+      dictionaries: [adjectives, colors, animals],
+      separator: "-",
+      length: 2,
+    });
+    setFormData({ ...formData, nickName: randomNickname });
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -61,7 +75,11 @@ const SignUp = () => {
                           type="text"
                           placeholder="Enter nick name"
                           name="nickName"
+                          
                         />
+                        <Button variant="secondary" onClick={generateNickname}>
+                          Generate Nickname
+                        </Button>
                       </Form.Group>
                       <Form.Group
                         className="mb-3"
