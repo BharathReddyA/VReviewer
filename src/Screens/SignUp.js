@@ -34,10 +34,30 @@ const SignUp = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your logic for form submission here
-    console.log("Form submitted:", formData);
+
+    try {
+      const response = await fetch("https://a619-72-73-30-138.ngrok-free.app/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Form submitted:", result);
+        // Add your logic for successful form submission
+      } else {
+        console.error("Form submission failed:", response.statusText);
+        // Add your logic for failed form submission
+      }
+    } catch (error) {
+      console.error("Form submission error:", error.message);
+      // Add your logic for handling errors during form submission
+    }
   };
 
   return (
