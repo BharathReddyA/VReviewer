@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Veridical Reviewer",
+  "name": "Veridical Reviewer",
+  "description": "A revwing system for websites and let them know about how users feel about their website in a click and this website is a login platform",
   "icons": [
     {
       "src": "favicon.ico",

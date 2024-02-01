@@ -15,7 +15,7 @@ function NavbarTop() {
         style={{ justifyContent: "space-between", flexDirection: "row" }}
       >
         <div>
-          <Navbar.Brand href="Login">
+          <Navbar.Brand href="/">
             <img
               src={veridicalLogo}
               width="80"
