@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
+// import ReactPlayer from "react-player";
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
         <div className="subHead">
           Empower Website Improvement with Veridical Reviewer
         </div>
-        <Row>
+        <Card></Card>
+        <Row style={{ marginTop: "20px" }}>
           <Col lg="4">
             <div className="brandObj">
               Veridical Reviewer is a browser extension designed to empower
@@ -88,6 +90,108 @@ export default function Home() {
             </Card>
           </Col>
         </Row>
+      </Container>
+      <Container className="homePageMainCont">
+        <div className="subHead">How Veridical Reviewer Works</div>
+        <Card></Card>
+        {/* <Row style={{ marginTop: "20px" }}>
+          <Col lg="4">
+            <Card className="featureCard">
+              <div className="subHead">SignUp or Login</div>
+              <div className="brandObj">
+                Create an account or log in securely to start your Veridical
+                Reviewer journey.
+              </div>
+            </Card>
+          </Col>
+          <Col lg="6">
+            <Card className="featureCard">
+            <ReactPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" height={"200px"} />
+            </Card>
+          </Col>
+        </Row>
+        <Row style={{ marginTop: "20px" }}>
+          <Col lg="4">
+            <Card className="featureCard">
+              <div className="subHead">SignUp or Login</div>
+              <div className="brandObj">
+                Create an account or log in securely to start your Veridical
+                Reviewer journey.
+              </div>
+            </Card>
+          </Col>
+        </Row>
+        <Row style={{ marginTop: "20px" }}>
+          <Col lg="4">
+            <Card className="featureCard">
+              <div className="subHead">Submit Reviews</div>
+              <div className="brandObj">
+                Visit any website, click the Veridical Reviewer extension, and
+                leave an anonymous review to help website owners understand user
+                perspectives.
+              </div>
+            </Card>
+          </Col>
+        </Row>
+        <Row style={{ marginTop: "20px" }}>
+          <Col lg="4">
+            <Card className="featureCard">
+              <div className="subHead">Engage with Community</div>
+              <div className="brandObj">
+                Interact with other users by liking, replying, and fostering
+                constructive discussions. Be a part of the website improvement
+                community.
+              </div>
+            </Card>
+          </Col>
+        </Row> */}
+        <Row style={{ marginTop: "20px", minHeight: '100px' }}>
+          <Col lg="4">
+            <TypeAnimation
+              sequence={[
+                "Visit the Chrome Web Store",
+                1000, // wait 1s before replacing the next substring
+                "Search for 'Veridical Reviewer Extension'",
+                1000,
+                "Download and add the extension to your browser",
+                1000,
+                "Click on the Veridical Reviewer Extension icon",
+                1000,
+                "Sign up or log in securely",
+                1000,
+                "Start your Veridical Reviewer journey!",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{
+                fontSize: "1.5em",
+                display: "inline-block",
+                color: "white",
+              }}
+              repeat={Infinity}
+            />
+          </Col>
+          <Col lg="4">
+            {/* <ReactPlayer
+              url=""
+              height={"200px"}
+            /> */}
+          </Col>
+        </Row>
+      </Container>
+      {/* Review section */}
+      <Container fluid style={{ marginBottom: "20px" }}>
+        <div className="footer">
+          <Row style={{color: "#FFFFFF"}}>
+            <Col sm='2' style={{textAlign: 'left'}}>Privacy policy</Col>
+            <Col sm='2' style={{textAlign: 'left'}}>Terms & services</Col>
+            <Col sm='2' style={{textAlign: 'left'}}>Contact Us</Col>
+            <Col sm='1'>|</Col>
+            <Col sm='2'>Follow us on</Col>
+            <Col sm='2'>social media links</Col>
+          </Row>
+        </div>
       </Container>
     </div>
   );

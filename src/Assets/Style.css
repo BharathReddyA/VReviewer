@@ -87,7 +87,7 @@
   border-color: #000f15;
   border-radius: 15px !important;
   box-shadow: 0px 10px 10px 0px #042d3c;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .brandElevation {
@@ -99,6 +99,7 @@
   color: #ffffff;
   padding: 10px;
   text-align: left;
+  font-size: 1em;
 }
 
 .subHead {
