@@ -30,6 +30,7 @@ function NavbarTop() {
             justifyContent: "flex-start",
             alignItems: "flex-end",
             flexDirection: "column-reverse",
+            color: "white"
           }}
         >
           <Navbar.Toggle
@@ -38,7 +39,7 @@ function NavbarTop() {
           />
           <Navbar.Collapse
             id="navbarScroll"
-            style={{ flexDirection: "column-reverse" }}
+            style={{ flexDirection: "column-reverse", color: "white" }}
           >
             <Nav
               className="me-auto my-2 my-lg-0"
