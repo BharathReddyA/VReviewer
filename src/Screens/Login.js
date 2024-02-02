@@ -9,6 +9,8 @@ const Login = () => {
     password: "",
   });
 
+  const { email, password } = formData;
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -17,10 +19,43 @@ const Login = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your logic for form submission here
-    console.log("Form submitted:", formData);
+
+    try {
+      const response = await fetch(
+        "https://2248-72-73-30-138.ngrok-free.app/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
+
+      if (!response.ok) {
+        console.error("Entered wrong details");
+        return;
+      }
+
+      const data = await response.json();
+      // const { firstName, _id } = data;
+      console.log("Login successful:", data.message);
+
+      setFormData({
+        email: "",
+        password: "",
+      });
+
+      // Handle the successful login, e.g., navigate to the user's dashboard
+      // Assuming you have a navigation prop available
+      // navigation.navigate("Dashboard", { firstName, _id });
+    } catch (error) {
+      console.error("Error logging in:", error);
+      console.error("this error:", error.message);
+      // Handle the error, e.g., display an error message to the user
+    }
   };
 
   return (
@@ -40,10 +75,9 @@ const Login = () => {
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control
-                          value={formData.email}
+                          value={email}
                           onChange={handleChange}
                           type="email"
-                          placeholder="Enter email"
                           name="email"
                         />
                       </Form.Group>
@@ -53,10 +87,9 @@ const Login = () => {
                       >
                         <Form.Label>Password</Form.Label>
                         <Form.Control
-                          value={formData.password}
+                          value={password}
                           onChange={handleChange}
                           type="password"
-                          placeholder="Password"
                           name="password"
                         />
                       </Form.Group>
@@ -88,7 +121,6 @@ const Login = () => {
             </Container>
           </Container>
         </Col>
-        {/* <Col lg={2}></Col> */}
         <Col lg={4}>
           <Card className="signupContentCard">
             Ad aliquip qui in enim reprehenderit laboris cillum enim quis elit

@@ -79,3 +79,13 @@
 .navbarStyle {
   background-color: #ffffff00 !important;
 }
+
+
+/* home page styles */
+.homePageMainCont{
+  background-color: #042d3c;
+  padding: 20px;
+  border-color: #000f15;
+  border-radius: 15px !important;
+  box-shadow: 0px 10px 10px 0px #042d3c;
+}

@@ -38,7 +38,7 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://a619-72-73-30-138.ngrok-free.app/signup", {
+      const response = await fetch("https://2248-72-73-30-138.ngrok-free.app/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

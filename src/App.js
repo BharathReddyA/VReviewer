@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./Screens/Login";
 import SignUp from "./Screens/SignUp";
+import Home from "./Screens/Home";
 import NavbarTop from "./components/NavbarTop";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <div>
         <NavbarTop/>
         <Routes>
+        <Route path="/" element={<Home />} index />
           <Route path="/Login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
         </Routes>

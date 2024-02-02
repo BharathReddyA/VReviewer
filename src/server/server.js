@@ -2,6 +2,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const validator = require('validator');
+const bcrypt = require('bcrypt');
 
 // Create Express app
 const app = express();
@@ -52,6 +54,40 @@ app.post('/signup', async (req, res) => {
     // Handle errors and respond with an error message
     console.error(error);
     res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+app.post("/login", async (req, res) => {
+  console.log("login request received");
+  try {
+    if (!validator.isEmail(req.body.email.toLowerCase())) {
+      return res.status(400).json({ error: "Invalid email address" });
+    }
+    // Use the DocRegistration schema to find the 's data
+    const existingUser = await User.findOne({ email: req.body.email });
+
+    if (!existingUser) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    const passwordMatch = await bcrypt.compare(
+      req.body.password,
+      existingUser.password
+    );
+
+    if (!passwordMatch) {
+      return res.status(401).json({ error: "Invalid credentials" });
+    }
+
+    res.json({
+      message: "Logged in successfully",
+      firstName: existingUser.firstName, // Include the first name here
+      _id: existingUser._id, // Include the first name here
+      feild: existingUser.feild, // Include the feild here
+    });
+  } catch (error) {
+    console.error("Express Error:", error);
+    res.status(500).json({ error: "An error occurred in express" });
   }
 });
 

@@ -50,6 +50,9 @@ function NavbarTop() {
               }}
               navbarScroll
             >
+              <Nav.Link href="/" style={{ color: "white" }}>
+                Home
+              </Nav.Link>
               <Nav.Link href="Login" style={{ color: "white" }}>
                 Login
               </Nav.Link>
