@@ -184,9 +184,9 @@ export default function Home() {
       <Container fluid style={{ marginBottom: "20px" }}>
         <div className="footer">
           <Row style={{color: "#FFFFFF"}}>
-            <Col sm='2' style={{textAlign: 'left'}}>Privacy policy</Col>
-            <Col sm='2' style={{textAlign: 'left'}}>Terms & services</Col>
-            <Col sm='2' style={{textAlign: 'left'}}>Contact Us</Col>
+            <Col sm='2' style={{textAlign: 'center'}}>Privacy policy</Col>
+            <Col sm='2' style={{textAlign: 'center'}}>Terms & services</Col>
+            <Col sm='2' style={{textAlign: 'center'}}>Contact Us</Col>
             <Col sm='1'>|</Col>
             <Col sm='2'>Follow us on</Col>
             <Col sm='2'>social media links</Col>
